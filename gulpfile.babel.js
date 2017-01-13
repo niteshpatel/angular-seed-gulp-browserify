@@ -1,6 +1,6 @@
-const requireDir = require('require-dir');
+import requireDir from "require-dir"
 
 /**
  * Load Gulp files from a subdirectory recursively
  */
-const dir = requireDir('./gulp', {recurse: true});
+requireDir('./gulp', {recurse: true});

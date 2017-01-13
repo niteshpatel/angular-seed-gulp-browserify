@@ -1,7 +1,7 @@
-describe('myApp.version module', function () {
-  beforeEach(module('myApp.version'));
+describe('components.version module', function () {
+  beforeEach(module('components.version'));
 
-  describe('app-version directive', function () {
+  describe('appVersion directive', function () {
     it('should print version', function () {
       inject(function ($compile, $rootScope) {
         const element = $compile('<app-version></app-version>')($rootScope);

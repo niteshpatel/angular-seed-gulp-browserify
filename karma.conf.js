@@ -7,7 +7,8 @@ module.exports = function (config) {
     files: [
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'src/app/components/**/*.js'
+      'src/app/**/*.module.js',
+      'src/app/**/!(*.module).js'
     ],
 
     autoWatch: false,
@@ -18,6 +19,6 @@ module.exports = function (config) {
 
     browsers: ['PhantomJS'],
 
-    plugins: ['karma-jasmine', 'karma-phantomjs-launcher']
+    plugins: ['karma-jasmine', 'karma-phantomjs-launcher', 'karma-chrome-launcher']
   });
 };
