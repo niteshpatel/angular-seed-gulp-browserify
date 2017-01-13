@@ -1,23 +1,23 @@
 //noinspection JSUnresolvedVariable
 module.exports = function (config) {
-    config.set({
+  config.set({
 
-        basePath: '.',
+    basePath: '.',
 
-        files: [
-            'node_modules/angular/angular.js',
-            'node_modules/angular-mocks/angular-mocks.js',
-            'app/components/**/*.js'
-        ],
+    files: [
+      'node_modules/angular/angular.js',
+      'node_modules/angular-mocks/angular-mocks.js',
+      'src/app/components/**/*.js'
+    ],
 
-        autoWatch: false,
+    autoWatch: false,
 
-        singleRun: true,
+    singleRun: true,
 
-        frameworks: ['jasmine'],
+    frameworks: ['jasmine'],
 
-        browsers: ['PhantomJS'],
+    browsers: ['PhantomJS'],
 
-        plugins: ['karma-jasmine', 'karma-phantomjs-launcher']
-    });
+    plugins: ['karma-jasmine', 'karma-phantomjs-launcher']
+  });
 };

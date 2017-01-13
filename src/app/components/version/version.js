@@ -1,3 +1,3 @@
 angular.module('myApp.version', [
-    'myApp.version.version-directive'
+  'myApp.version.version-directive'
 ]);
