@@ -1,5 +1,5 @@
-//noinspection JSUnresolvedVariable
 module.exports = function (config) {
+  //noinspection JSFileReferences
   config.set({
 
     basePath: '.',
@@ -7,8 +7,7 @@ module.exports = function (config) {
     files: [
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'src/app/**/*.module.js',
-      'src/app/**/!(*.module).js'
+      '.dist/scripts/app.js'
     ],
 
     autoWatch: false,
