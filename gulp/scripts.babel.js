@@ -6,9 +6,13 @@ import sourcemaps from "gulp-sourcemaps"
 
 gulp.task('scripts', [], () => {
   return gulp.src([
+    // Angular module files must be loaded first but angular will
+    // sort out all other dependency ordering automatically
     'src/app/**/*.module.js',
     'src/app/**/*.js',
-    '!src/app/**/*.spec.js',
+
+    // Exclude Jasmine test files from the bundle
+    '!src/app/**/*.spec.js'
   ])
 
   // All plugins between sourcemaps.init and write must support sourcemaps
@@ -20,6 +24,7 @@ gulp.task('scripts', [], () => {
     // Minification
     .pipe(uglify())
 
+    // Write out the sourcemaps to the end of the bundle
     .pipe(sourcemaps.write())
 
     // Write to dist folder
