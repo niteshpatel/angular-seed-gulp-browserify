@@ -5,9 +5,15 @@ module.exports = function (config) {
     basePath: '.',
 
     files: [
+      // Vendor
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      '.dist/scripts/app.js'
+
+      // App
+      '.dist/scripts/app.js',
+
+      // Tests
+      'src/app/**/*.spec.js'
     ],
 
     autoWatch: false,
